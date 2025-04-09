@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulang Tahun Qiara Yuvansha yang ke-2</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom, #ffc0cb, #ffe4ec);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff4081;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: #006064;
+      margin-top: 0;
+    }
+
+    .photo {
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ffb6c1;
+      width: 250px;
+    }
+
+    .details {
+      margin-top: 20px;
+      font-size: 1.1em;
+      line-height: 1.8em;
+      color: #333;
+    }
+
+    .details a {
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Balon (latar belakang) */
+    .balloon {
+      position: absolute;
+      width: 60px;
+      animation: floatUp 10s infinite ease-in;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      0% { bottom: -100px; transform: translateX(0); }
+      100% { bottom: 100vh; transform: translateX(100px); }
+    }
+
+    /* Ikan & mermaid (di depan) */
+    .floating-icons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999; /* Di depan semuanya */
+    }
+
+    .icon {
+      position: absolute;
+      width: 80px;
+      animation: swimRight 20s linear infinite;
+      transform: scaleX(-1); /* Menghadap ke kiri */
+    }
+
+    @keyframes swimRight {
+      0% { left: -100px; }
+      100% { left: 100vw; }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik ulang tahun -->
+  <audio autoplay loop>
+    <source src="lagu-ulangtahun.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Balon-balon -->
+  <img src="balloon.png" class="balloon" style="left: 10%;" />
+  <img src="balloon.png" class="balloon" style="left: 30%;" />
+  <img src="balloon.png" class="balloon" style="left: 50%;" />
+  <img src="balloon.png" class="balloon" style="left: 70%;" />
+
+  <!-- Kartu Undangan -->
+  <div class="container">
+    <div class="card">
+      <h1>Ulang Tahun Qiara Yuvansha</h1>
+      <h2>Yang ke-2 🎉</h2>
+      <img class="photo" src="foto-qiara.jpeg" alt="Foto Qiara" />
+      <div class="details">
+        <p>✨ Yuk datang ke pesta ulang tahun Qiara!</p>
+        <p><strong>📍 Lokasi:</strong> Jurit</p>
+        <p><strong>📅 Hari:</strong> Minggu, 20 April 2025</p>
+        <p><strong>⏰ Waktu:</strong> Sore pukul 16.00 WITA</p>
+        <p><strong>🗺️ Google Maps:</strong> 
+          <a href="https://maps.app.goo.gl/y8NhtQH9ir7bq4By6" target="_blank">
+            Klik untuk melihat lokasi
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ikan dan Mermaid di DEPAN -->
+  <div class="floating-icons">
+    <img src="mermaid.png" class="icon" style="top: 20%;" />
+    <img src="shark.png" class="icon" style="top: 50%;" />
+    <img src="fish1.png" class="icon" style="top: 70%;" />
+    <img src="fish2.png" class="icon" style="top: 40%;" />
+  </div>
+
+</body>
+</html>
